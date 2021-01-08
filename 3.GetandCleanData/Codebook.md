@@ -1,7 +1,7 @@
 # Code Book
 ## 1. INTRODUCTION
 This code book describes the functions, variables, data and the pipeline used in this project.
-Analysis was performed on Training and Test sets.
+Analysis was performed on Training and Test data sets.
 
 ## 2. DATASET
 The Dataset was sourced from the *Human Activity Recognition Using Smartphones Dataset Version 1.0* available at:
@@ -17,12 +17,8 @@ File list:
 -  'test/y_test.txt': Test data labels.
 -  'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
-
 ## 3. FEATURE SELECTION
-To learn more about the feature selection, please refer to the README, features.txt and features_info.txt included in the original dataset.
+To learn more about the feature selection, please refer to the *README.txt*, *features.txt* and *features_info.txt* included in the original dataset.
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -68,26 +64,21 @@ The complete list of variables of each feature vector is available in 'features.
 
 ## 5. FUNCTIONS
 **merge()**
-  
   Read and merges training and test sets into one data set. Assign feature labels to each column. Returns a data frame.
   
 **meansd(data)**
-   
    Extracts only the measurements on the mean and standard deviation for each measurement. 
    Takes a data frame as an argument and extracts columns with 'mean' and 'sd' labels. Includes subjectID and activityLabels to the data set. Returns a data frame.
   
 **setdesc(data)**
-  
   Uses descriptive activity names to name the activities in the data set. Appropriately labels the data set with descriptive variable names.
   Takes a data frame as an argument, adds column containing assigned activity names based on activityLabels, removes activityLabels column, converts column names to lowercase and removes '()' substring. 
 
 **setmean(data)**
-  
   Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   Takes a data frame as an argument, groups data by two (2) columns: subjectid & activity, obtains the mean value of each variable. Returns a data frame.
 
 **main()**
-  
   Starts the Main Process with the following functions: merge(), meansd(), setdesc(), setmean() then writes the output to "cleandata.txt" and "cleandata_mean.txt". Returns the dataframe from setmean().
   
 ## 6. ANALYSIS PIPELINE
@@ -96,7 +87,7 @@ The complete list of variables of each feature vector is available in 'features.
   2. **meansd(data)** Extract only the measurements on the mean and standard deviation for each measurement. 
   3. **setdesc(data)** Use descriptive activity names to name the activities in the data set and labels the data set with descriptive variable names. 
   5. **setmean(data)** Creates a second, independent tidy data set with the average of each variable for each activity and each subject using *dplyr* package.
-  6. Export data to "cleandata.txt" and "cleandata_mean.txt"
+  6. Export data to *cleandata.txt* and *cleandata_mean.txt*
 
 ## 7. REFERENCES
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+[1] *Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012*
