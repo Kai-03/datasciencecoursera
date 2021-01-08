@@ -1,9 +1,9 @@
 # Code Book
-## 1.0 INTRODUCTION
+## 1 INTRODUCTION
 This code book describes the functions, variables, data and the pipeline used in this project.
 Analysis was performed on Training and Test sets.
 
-## 1.1 DATASET
+## 2 DATASET
 The Dataset was sourced from the *Human Activity Recognition Using Smartphones Dataset Version 1.0* available at:
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
@@ -21,7 +21,7 @@ File list:
 ..*'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 ..*'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-## 1.2 FEATURE SELECTION
+## 2.1 FEATURE SELECTION
 To learn more about the feature selection, please refer to the README, features.txt and features_info.txt included in the original dataset.
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
@@ -33,9 +33,9 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-## 1.3 FEATURE VARIABLES
+## 2.2 FEATURE VARIABLES
 
-### Time signals
+### 2.2.1 Time signals
 
 ..* tBodyAcc-XYZ
 ..* tGravityAcc-XYZ
@@ -48,7 +48,7 @@ These signals were used to estimate variables of the feature vector for each pat
 ..* tBodyGyroMag
 ..* tBodyGyroJerkMag
 
-### Frequency domain signals
+### 2.2.2 Frequency domain signals
 
 ..* fBodyAcc-XYZ
 ..* fBodyAccJerk-XYZ
@@ -66,7 +66,7 @@ The set of variables that were estimated from these signals are:
 The resulting variable names uses the following format: tbodyacc-xyz-mean which corresponds to the mean of tBodyAcc-XYZ.
 The complete list of variables of each feature vector is available in 'features.txt'
 
-## 1.4 FUNCTIONS
+## 3 FUNCTIONS
 **merge()**
   Read and merges training and test sets into one data set. Assign feature labels to each column. Returns a data frame.
   
@@ -85,7 +85,7 @@ The complete list of variables of each feature vector is available in 'features.
 **main()**
   Starts the Main Process with the following functions: merge(), meansd(), setdesc(), setmean() then writes the output to "cleandata.txt" and "cleandata_mean.txt". Returns the dataframe from setmean().
   
-## 1.5 ANALYSIS PIPELINE
+## 4 ANALYSIS PIPELINE
 ### Main Process: main()
   1. **merge()** Merge the training and the test sets to create one data set.
   2. **meansd(data)** Extract only the measurements on the mean and standard deviation for each measurement. 
@@ -93,5 +93,5 @@ The complete list of variables of each feature vector is available in 'features.
   5. **setmean(data)** Creates a second, independent tidy data set with the average of each variable for each activity and each subject using *dplyr* package.
   6. Export data to "cleandata.txt" and "cleandata_mean.txt"
 
-## 1.6 REFERENCES
+## 5 REFERENCES
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
