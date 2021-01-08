@@ -21,5 +21,4 @@ The R script **run_analysis.R** contains a series of functions that does the fol
 
 ## 4. RAW DATA
 The Data set used for this project can be obtained from:
-[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]
-(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
