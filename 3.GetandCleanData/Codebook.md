@@ -61,26 +61,32 @@ The set of variables that were estimated from these signals are:
 -  std: Standard deviation
 
 The resulting variable names uses the following format: tbodyacc-xyz-mean which corresponds to the mean of tBodyAcc-XYZ.
+
 The complete list of variables of each feature vector is available in 'features.txt'
 
 ## 5. FUNCTIONS
 **merge()**
-  Read and merges training and test sets into one data set. Assign feature labels to each column. Returns a data frame.
+
+Read and merges training and test sets into one data set. Assign feature labels to each column. Returns a data frame.
   
 **meansd(data)**
-   Extracts only the measurements on the mean and standard deviation for each measurement. 
-   Takes a data frame as an argument and extracts columns with 'mean' and 'sd' labels. Includes subjectID and activityLabels to the data set. Returns a data frame.
+
+Extracts only the measurements on the mean and standard deviation for each measurement. 
+Takes a data frame as an argument and extracts columns with 'mean' and 'sd' labels. Includes subjectID and activityLabels to the data set. Returns a data frame.
   
 **setdesc(data)**
-  Uses descriptive activity names to name the activities in the data set. Appropriately labels the data set with descriptive variable names.
-  Takes a data frame as an argument, adds column containing assigned activity names based on activityLabels, removes activityLabels column, converts column names to lowercase and removes '()' substring. 
+
+Uses descriptive activity names to name the activities in the data set. Appropriately labels the data set with descriptive variable names.
+Takes a data frame as an argument, adds column containing assigned activity names based on activityLabels, removes activityLabels column, converts column names to lowercase and removes '()' substring. 
 
 **setmean(data)**
-  Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-  Takes a data frame as an argument, groups data by two (2) columns: subjectid & activity, obtains the mean value of each variable. Returns a data frame.
+
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Takes a data frame as an argument, groups data by two (2) columns: subjectid & activity, obtains the mean value of each variable. Returns a data frame.
 
 **main()**
-  Starts the Main Process with the following functions: merge(), meansd(), setdesc(), setmean() then writes the output to "cleandata.txt" and "cleandata_mean.txt". Returns the dataframe from setmean().
+
+Starts the Main Process with the following functions: merge(), meansd(), setdesc(), setmean() then writes the output to "cleandata.txt" and "cleandata_mean.txt". Returns the dataframe from setmean().
   
 ## 6. ANALYSIS PIPELINE
 ### Main Process: main()
