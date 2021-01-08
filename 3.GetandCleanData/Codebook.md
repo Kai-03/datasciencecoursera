@@ -4,7 +4,7 @@ This code book describes the functions, variables, data and the pipeline used in
 Analysis was performed on Training and Test data sets.
 
 ## 2. DATASET
-The Dataset was sourced from the *Human Activity Recognition Using Smartphones Dataset* Version 1.0, available at:
+The Dataset was sourced from the *Human Activity Recognition Using Smartphones Dataset Version 1.0*, available at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 File list:
