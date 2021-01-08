@@ -7,7 +7,7 @@ Analysis was performed on Training and Test data sets.
 The Dataset was sourced from the *Human Activity Recognition Using Smartphones Dataset Version 1.0*, available at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-File list:
+Contents:
 -  'features_info.txt': Shows information about the variables used on the feature vector.
 -  'features.txt': List of all features (561).
 -  'activity_labels.txt': Links the class labels with their activity name (6).
