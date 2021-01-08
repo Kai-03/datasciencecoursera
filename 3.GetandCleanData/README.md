@@ -17,7 +17,7 @@ The R script **run_analysis.R** contains a series of functions that does the fol
 
 ## 3. HOW TO USE
 1. Download the **UCI HAR Dataset** and place in the current working directory.
-2. Source the R script **run_analysis.R** and run the command **main()** in the console.
+2. Source the R script **run_analysis.R** and enter **main()** in the console.
 
 ## 4. RAW DATA
 The Data set used for this project can be obtained from:
