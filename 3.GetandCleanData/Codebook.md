@@ -8,18 +8,18 @@ The Dataset was sourced from the *Human Activity Recognition Using Smartphones D
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 File list:
-..* 'features_info.txt': Shows information about the variables used on the feature vector.
-..* 'features.txt': List of all features (561).
-..* 'activity_labels.txt': Links the class labels with their activity name (6).
-..* 'train/X_train.txt': Training data set.
-..* 'train/y_train.txt': Training data labels.
-..* 'test/X_test.txt': Test data set.
-..* 'test/y_test.txt': Test data labels.
-..* 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+-\t 'features_info.txt': Shows information about the variables used on the feature vector.
+-\t 'features.txt': List of all features (561).
+-\t 'activity_labels.txt': Links the class labels with their activity name (6).
+-\t 'train/X_train.txt': Training data set.
+-\t 'train/y_train.txt': Training data labels.
+-\t 'test/X_test.txt': Test data set.
+-\t 'test/y_test.txt': Test data labels.
+-\t 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-..*'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-..*'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-..*'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+-\t'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+-\t'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+-\t'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 ## 2.1 FEATURE SELECTION
 To learn more about the feature selection, please refer to the README, features.txt and features_info.txt included in the original dataset.
@@ -37,31 +37,31 @@ These signals were used to estimate variables of the feature vector for each pat
 
 ### 2.2.1 Time signals
 
-..* tBodyAcc-XYZ
-..* tGravityAcc-XYZ
-..* tBodyAccJerk-XYZ
-..* tBodyGyro-XYZ
-..* tBodyGyroJerk-XYZ
-..* tBodyAccMag
-..* tGravityAccMag
-..* tBodyAccJerkMag
-..* tBodyGyroMag
-..* tBodyGyroJerkMag
+-\t tBodyAcc-XYZ
+-\t tGravityAcc-XYZ
+-\t tBodyAccJerk-XYZ
+-\t tBodyGyro-XYZ
+-\t tBodyGyroJerk-XYZ
+-\t tBodyAccMag
+-\t tGravityAccMag
+-\t tBodyAccJerkMag
+-\t tBodyGyroMag
+-\t tBodyGyroJerkMag
 
 ### 2.2.2 Frequency domain signals
 
-..* fBodyAcc-XYZ
-..* fBodyAccJerk-XYZ
-..* fBodyGyro-XYZ
-..* fBodyAccMag
-..* fBodyAccJerkMag
-..* fBodyGyroMag
-..* fBodyGyroJerkMag
+-\t fBodyAcc-XYZ
+-\t fBodyAccJerk-XYZ
+-\t fBodyGyro-XYZ
+-\t fBodyAccMag
+-\t fBodyAccJerkMag
+-\t fBodyGyroMag
+-\t fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-..* mean: Mean value
-..* std: Standard deviation
+-\t mean: Mean value
+-\t std: Standard deviation
 
 The resulting variable names uses the following format: tbodyacc-xyz-mean which corresponds to the mean of tBodyAcc-XYZ.
 The complete list of variables of each feature vector is available in 'features.txt'
