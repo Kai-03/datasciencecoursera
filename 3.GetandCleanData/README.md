@@ -16,7 +16,7 @@ The R script **run_analysis.R** contains a series of functions that does the fol
       - 'cleandata_mean.txt': contains independent tidy data set with the average values in Step 5.
 
 ## 3. HOW TO USE
-1. Download the **UCI HAR Dataset** and place in the current working directory.
+1. Download the **UCI HAR Dataset** and place contents in the current working directory.
 2. Source the R script **run_analysis.R** and enter **main()** in the console.
 
 ## 4. RAW DATA
